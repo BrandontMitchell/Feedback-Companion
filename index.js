@@ -9,7 +9,7 @@ const app = express();
 // res.send({hi: 'there'}) --> immediately send some JSON back to who ever made this request
 // app.listen(5000) --> tells node to listen for port 5000 
 app.get('/', (req, res) => {
-    res.send({hi: 'there'});
+    res.send({bye: 'buddy'});
 });
 
 const PORT = process.env.PORT || 5000;
