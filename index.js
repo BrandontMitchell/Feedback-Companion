@@ -1,11 +1,10 @@
 const express = require("express");
-const mongoose = require('mongoose');
-const cookieSession = require('cookie-session');
-const passport = require('passport');
-const keys = require('./config/keys');
-require('./models/User');
-require('./services/passport');
-
+const mongoose = require("mongoose");
+const cookieSession = require("cookie-session");
+const passport = require("passport");
+const keys = require("./config/keys");
+require("./models/User");
+require("./services/passport");
 
 mongoose.connect(keys.mongoURI);
 
@@ -21,8 +20,8 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/authRoutes')(app); // instead of assigning a const, we can directly apply an 
-                                    // argument to the require statement
+require("./routes/authRoutes")(app); // instead of assigning a const, we can directly apply an
+// argument to the require statement
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
