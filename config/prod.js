@@ -5,5 +5,3 @@ module.exports = {
     mongoURI: process.env.MONGO_URI,
     cookieKey: process.env.COOKIE_KEY
 };
-
-'mongodb+srv://root:FgSqniwREHRxhrlB@emaily-prod-jd3ai.mongodb.net/test?retryWrites=true&w=majority'
