@@ -3,12 +3,12 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Header from "./Header";
+import Landing from './Landing';
 // BrowserRouter tells router how to change, Route used to setup rule between action and what will happen
 // Browser only can have max one child component!
 
 const Dashboard = () => <h2>Dashboard</h2>;
 const SurveyNew = () => <h2>SurveyNew</h2>;
-const Landing = () => <h2>Landing</h2>;
 
 class App extends Component {
     componentDidMount() {
