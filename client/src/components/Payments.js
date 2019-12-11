@@ -7,7 +7,7 @@ class Payments extends Component {
         return (
             <StripeCheckout 
                 amount={500} // 5 dollars us currency (500 cents)
-                token={token => console.log(tokend)}
+                token={token => console.log(token)}
                 stripeKey={process.env.REACT_APP_STRIPE_KEY}
             />
         );
