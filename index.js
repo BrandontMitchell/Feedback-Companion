@@ -20,8 +20,8 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./routes/authRoutes")(app); // instead of assigning a const, we can directly apply an
-// argument to the require statement
+require("./routes/authRoutes")(app);
+require('./routes/billingRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
