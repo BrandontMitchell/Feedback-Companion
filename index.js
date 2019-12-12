@@ -12,6 +12,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+//middle ware
 app.use(bodyParser.json());
 app.use(
   cookieSession({
