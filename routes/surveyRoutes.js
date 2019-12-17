@@ -10,6 +10,10 @@ module.exports = app => {
         res.send('Thanks for your feedback!');
     });
 
+    app.post('/api/surveys/webhooks', (req, res) =>{
+        console.log(req.body);
+        res.send({})
+    });
     app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
         const { title, subject, body, recipients } = req.body; // es6 syntax for grabbing data from request
         const survey = new Survey({
