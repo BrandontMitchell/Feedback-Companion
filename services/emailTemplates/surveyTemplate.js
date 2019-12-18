@@ -1,8 +1,7 @@
-const keys = require('../../config/keys');
+const keys = require("../../config/keys");
 
 module.exports = survey => {
-
-    // es syntax w/ backtick for html linting
+  // es syntax w/ backtick for html linting
   return `
     <html>
     <body>
