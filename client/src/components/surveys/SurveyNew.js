@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { reduxForm } from 'redux-form';
+import { reduxForm } from "redux-form";
 import SurveyForm from "./SurveyForm";
 import SurveyFormReview from "./SurveyFormReview";
 // Shows survey new creation
@@ -9,8 +9,11 @@ class SurveyNew extends Component {
 
   renderContent() {
     if (this.state.showFormReview) {
-      return <SurveyFormReview 
-      onCancel={() => this.setState({ showFormReview: false })}/>;
+      return (
+        <SurveyFormReview
+          onCancel={() => this.setState({ showFormReview: false })}
+        />
+      );
     }
     return (
       <SurveyForm
@@ -24,5 +27,5 @@ class SurveyNew extends Component {
 }
 
 export default reduxForm({
-    form: 'surveyForm'
+  form: "surveyForm"
 })(SurveyNew);
